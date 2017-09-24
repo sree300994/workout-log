@@ -1,0 +1,9 @@
+<%= simple_form_for([@workout, @workout.exercises.build]) do |f| %>
+	<%= f.input :name, label: "Name : " %> </br>
+
+	<%= f.input :sets, label: "Sets : " %> </br>
+
+	<%= f.input :reps, label: "Reps : " %> </br>
+
+	<%= f.button :submit %>
+<% end %>

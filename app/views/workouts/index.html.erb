@@ -1,0 +1,9 @@
+<h2>Listing WorkOuts</h2>
+
+<% @workouts.each do |workout| %>
+	<p>Date : <%= link_to workout.date, workout_path(workout) %></p>
+	<p>WorkOut : <%= workout.workout %></p>
+	<p>Mood : <%= workout.mood %></p>
+	<p>Length : <%= workout.length %></p>
+	<%= link_to "Back", workouts_path %> | <%= link_to "Edit", edit_workout_path(workout) %>
+<% end %>

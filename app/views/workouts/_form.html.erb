@@ -1,0 +1,12 @@
+<%= simple_form_for @workout do |f| %>
+
+	<%= f.input :date, label: "Date : " %> </br>
+
+	<%= f.input :workout, label: "WorkOut : " %> </br>
+
+	<%= f.input :mood, label: "Mood : " %> </br>
+
+	<%= f.input :length, label: "Length : " %> </br>
+
+	<%= f.button :submit %> </br>
+<% end %>

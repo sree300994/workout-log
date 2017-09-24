@@ -1,8 +1,12 @@
 <%= simple_form_for @workout do |f| %>
+	
+	<div class="form-group">
+		<%= f.input :date, label: "Date : "   %> </br>
+	</div>
 
-	<%= f.input :date, label: "Date : " %> </br>
-
-	<%= f.input :workout, label: "WorkOut : " %> </br>
+	<div class="form-group">
+		<%= f.input_field :workout, :placeholder => "Write WorkOut" %> </br>
+	</div>
 
 	<%= f.input :mood, label: "Mood : " %> </br>
 

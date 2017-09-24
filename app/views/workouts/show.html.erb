@@ -12,7 +12,13 @@
 
 <%= render @workout.exercises %>
 
-<h3>Add an Exercise</h3>
+
+<div class="test-font">
+	<h3>Add an Exercise</h3>	
+</div>
+
+
+
 <%= render "exercises/form" %>
 
 <%= link_to "Back", workouts_path %> | <%= link_to "Destroy", workout_path(@workout), method: :delete, data: { confirm: "Are you sure?" } %>

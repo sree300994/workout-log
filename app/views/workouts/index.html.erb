@@ -5,5 +5,75 @@
 	<p>WorkOut : <%= workout.workout %></p>
 	<p>Mood : <%= workout.mood %></p>
 	<p>Length : <%= workout.length %></p>
-	<%= link_to "Back", workouts_path %> | <%= link_to "Edit", edit_workout_path(workout) %>
+	
+
+
+
+	<%= link_to workouts_path do %>
+		<span class="glyphicon glyphicon-backward"></span> 
+	<% end %>
+
+	|
+
+
+
+	<%#= link_to "Edit", edit_workout_path(workout) %>
+
+	<%= link_to  edit_workout_path(workout), class: "" do %>
+    	<i class="glyphicon glyphicon-edit"></i>
+	<% end %>
+
+
+
+
+
 <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="" data-toggle="modal" data-target="#myModal">
+  New Work out
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @workout do |f| %>
+
+	<%= f.input :date, label: "Date : " %> </br>
+
+	<%= f.input :workout, label: "WorkOut : " %> </br>
+
+	<%= f.input :mood, label: "Mood : " %> </br>
+
+	<%= f.input :length, label: "Length : " %> </br>
+
+	<%= f.button :submit %> </br>
+<% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
